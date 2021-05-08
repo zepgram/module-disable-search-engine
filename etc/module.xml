@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Zepgram, Inc. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Zepgram_DisableSearchEngine">
+        <sequence>
+            <module name="Magento_Search"/>
+            <module name="Magento_CatalogSearch"/>
+        </sequence>
+    </module>
+</config>
