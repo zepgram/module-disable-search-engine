@@ -5,7 +5,6 @@ declare(strict_types=1);
 /**
  * Copyright © Zepgram, Inc. All rights reserved.
  */
-
 namespace Zepgram\DisableSearchEngine\SearchAdapter;
 
 use Magento\Framework\Api\Search\BucketInterface;
