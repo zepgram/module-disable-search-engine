@@ -22,6 +22,10 @@ You should have no issue with indexation, compilation and even front-end researc
 
 If you encountered an issue during installation, please report it on this github repository.
 
+Release 2.4.3 includes change handled on latest tag v0.1.0.
+
+Release < 2.4.3 must be installed with tag v0.0.2.
+
 ## Installation
 ```
 composer require zepgram/module-disable-search-engine
