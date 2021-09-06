@@ -10,6 +10,7 @@ Disable default search engine in Magento2 and catalog search fulltext indexing.
 - Uninstall magento modules:
     - magento/module-advanced-search
     - magento/module-elasticsearch-catalog-permissions
+    - magento/module-inventory-elasticsearch
     - magento/module-elasticsearch
     - magento/module-elasticsearch-6
     - magento/module-elasticsearch-7
@@ -22,9 +23,9 @@ You should have no issue with indexation, compilation and even front-end researc
 
 If you encountered an issue during installation, please report it on this github repository.
 
-Release 2.4.3 includes change handled on latest tag v0.1.0.
+For version greater or equal to v2.4.3 you can install the latest tag v0.1.x.
 
-Release < 2.4.3 must be installed with tag v0.0.2.
+For lower version you may install v0.0.x.
 
 ## Installation
 ```
