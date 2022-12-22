@@ -17,6 +17,7 @@ Natively Magento do not offer the possibility to completely disable ElasticSearc
 - Return empty response from front-end queries
 - Uninstall magento modules:
     - magento/module-elasticsearch-catalog-permissions
+    - magento/module-elasticsearch-catalog-permissions-graph-ql
     - magento/module-inventory-elasticsearch
     - magento/module-elasticsearch
     - magento/module-elasticsearch-6
