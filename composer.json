@@ -2,7 +2,7 @@
   "name": "zepgram/module-disable-search-engine",
   "description": "Magento2 module to disable search engine and fulltext indexing for category search",
   "type": "magento2-module",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "authors": [
     {
       "name": "Benjamin Calef",
@@ -19,6 +19,7 @@
   },
   "replace": {
     "magento/module-elasticsearch-catalog-permissions": "*",
+    "magento/module-elasticsearch-catalog-permissions-graph-ql": "*",
     "magento/module-inventory-elasticsearch": "*",
     "magento/module-elasticsearch": "*",
     "magento/module-elasticsearch-6": "*",
