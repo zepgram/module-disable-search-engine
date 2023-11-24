@@ -51,6 +51,11 @@ class Adapter implements AdapterInterface
     private $aggregationFactory;
 
     /**
+     * @var BucketFactory
+     */
+    private $bucketFactory;
+
+    /**
      * Adapter constructor.
      * @param ResponseFactory $responseFactory
      * @param AggregationFactory $aggregationFactory
