@@ -22,6 +22,7 @@ Natively Magento do not offer the possibility to completely disable ElasticSearc
     - magento/module-elasticsearch
     - magento/module-elasticsearch-6
     - magento/module-elasticsearch-7
+    - magento/module-open-search
 
 You should have no issue with indexation, compilation and even front-end research, which should always return no result.
 
