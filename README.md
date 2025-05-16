@@ -6,7 +6,7 @@ This module disables the default Magento 2 catalog search engine and related ful
 
 Magento 2 requires Elasticsearch or OpenSearch by default, even if your architecture does not use it for product search or catalog visibility.
 
-This module *completely disables Magento’s native search engine requirement*, allowing you to:
+This module **completely disables Magento’s native search engine requirement**, allowing you to:
 - Simplify Magento's architecture
 - Avoid unnecessary Elasticsearch dependencies
 - Prevent unwanted background processes like search indexation
