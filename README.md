@@ -22,20 +22,22 @@ Natively Magento do not offer the possibility to completely disable ElasticSearc
     - magento/module-elasticsearch
     - magento/module-elasticsearch-6
     - magento/module-elasticsearch-7
+    - magento/module-elasticsearch-8
     - magento/module-open-search
 
 You should have no issue with indexation, compilation and even front-end research, which should always return no result.
 
 ## Compatibility
 
-| Magento    | v2.3.0 | v2.4.3 | v2.4.4 | v2.4.6 |
-|------------|--------|--------|--------|--------|
-| module DSE | ~0.0.0 | ~0.1.0 | ~0.2.0 | ~0.3.0 |
+| Magento    | v2.3.0 | v2.4.3 | v2.4.4 | v2.4.6 | v2.4.8
+|------------|--------|--------|--------|--------|--------
+| module DSE | ~0.0.0 | ~0.1.0 | ~0.2.0 | ~0.3.0 | ~0.4.0
 
 ### Notes
 - v0.1.0: adding indexer handler (Magento 2.4.3)
 - v0.2.0: the `magento/module-advanced-search` has been reintroduced due to a dependency in `magento/module-catalog-graph-ql` (Magento 2.4.4).
 - v0.3.0: uninstalling `magento/module-open-search`
+- v0.4.0: uninstalling `magento/module-elasticsearch-8`
 
 ## Installation
 ```
