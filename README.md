@@ -1,20 +1,26 @@
-# Disable Search Engine
+# Disable Search Engine for Magento 2
 
-Disable default search engine in Magento2 and catalog search fulltext indexing.
+This module disables the default Magento 2 catalog search engine and related fulltext indexing—ideal for setups where search is handled outside of Magento (e.g., via a PIM, custom microservices, custom Elasticsearch implementation etc.).
 
-## Purpose
+## 🧭 Purpose
 
-When catalog search and display are not handled by your Magento it could be redundant to integrate ES in your architecture.
+Magento 2 requires Elasticsearch or OpenSearch by default, even if your architecture does not use it for product search or catalog visibility.
 
-You may have a PIM dedicated for this, or maybe you are designing a microservice architecture, you want to smooth the Magento monolith aspect etc...
+This module *completely disables Magento’s native search engine requirement*, allowing you to:
+- Simplify Magento's architecture
+- Avoid unnecessary Elasticsearch dependencies
+- Prevent unwanted background processes like search indexation
 
-Natively Magento do not offer the possibility to completely disable ElasticSearch, this module made it possible.
+Natively Magento do not offer the possibility to completely disable ElasticSearch, this module does.
 
-## What it does
+## ✅ What it does
 
 - Make Elasticsearch service no longer required to install and run Magento2.
 - Set value "none" as default search engine
-- Return empty response from front-end queries
+- Returns empty search results for all frontend catalog search queries
+- Since Magento 2 Product Listing Pages (PLPs) rely on the search engine to fetch and filter products:
+    - All PLPs will return no products when this module is enabled.
+    - You must implement a custom product listing mechanism (via GraphQL, REST, or direct DB access) in your frontend or headless architecture.
 - Uninstall magento modules:
     - magento/module-elasticsearch-catalog-permissions
     - magento/module-elasticsearch-catalog-permissions-graph-ql
@@ -25,27 +31,27 @@ Natively Magento do not offer the possibility to completely disable ElasticSearc
     - magento/module-elasticsearch-8
     - magento/module-open-search
 
-You should have no issue with indexation, compilation and even front-end research, which should always return no result.
+You can continue to index, compile, and run Magento without errors.
 
-## Compatibility
+## 🧩 Compatibility
 
-| Magento    | v2.3.0 | v2.4.3 | v2.4.4 | v2.4.6 | v2.4.8
-|------------|--------|--------|--------|--------|--------
-| module DSE | ~0.0.0 | ~0.1.0 | ~0.2.0 | ~0.3.0 | ~0.4.0
+| Magento Version | v2.3.0 | v2.4.3 | v2.4.4 | v2.4.6 | v2.4.8
+|-----------------|--------|--------|--------|--------|--------
+| Module Version  | ~0.0.0 | ~0.1.0 | ~0.2.0 | ~0.3.0 | ~0.4.0
 
-### Notes
+### Version Notes
 - v0.1.0: adding indexer handler (Magento 2.4.3)
-- v0.2.0: the `magento/module-advanced-search` has been reintroduced due to a dependency in `magento/module-catalog-graph-ql` (Magento 2.4.4).
-- v0.3.0: uninstalling `magento/module-open-search`
-- v0.4.0: uninstalling `magento/module-elasticsearch-8`
+- v0.2.0: Reintroduced `magento/module-advanced-search` due to dependency with `catalog-graph-ql` (Magento 2.4.4)
+- v0.3.0: Added support for uninstalling `magento/module-open-search`
+- v0.4.0: Added support for uninstalling `magento/module-elasticsearch-8`
 
-## Installation
+## 🚀 Installation
 ```
 composer require zepgram/module-disable-search-engine
 bin/magento module:enable Zepgram_DisableSearchEngine
 bin/magento setup:upgrade
 ```
 
-## Issue
+## 🐞 Issue
 
-If you encountered an issue, please report it on this GitHub repository.
+If you encounter any issues, please open a ticket on the GitHub repository or create a PR. 
