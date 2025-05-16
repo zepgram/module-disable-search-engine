@@ -8,7 +8,7 @@ Magento 2 requires Elasticsearch or OpenSearch by default, even if your architec
 
 This module **completely disables Magento’s native search engine requirement**, allowing you to:
 - Simplify Magento's architecture
-- Avoid unnecessary Elasticsearch dependencies
+- Avoid unnecessary Elasticsearch & OpenSearch dependencies
 - Prevent unwanted background processes like search indexation
 
 Natively Magento do not offer the possibility to completely disable ElasticSearch, this module does.
